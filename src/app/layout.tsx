@@ -1,9 +1,16 @@
 // Types
-import { Inter } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
+
+// CN
+import { cn } from "@/lib/utils";
 
 // Font & Styles
-import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.css";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 // Types
 import type { Metadata } from "next";
@@ -13,10 +20,12 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn("bg-slate-100", fontSans.variable)}>{children}</body>
     </html>
   );
 }
