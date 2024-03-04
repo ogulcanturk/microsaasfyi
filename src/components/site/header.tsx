@@ -1,7 +1,7 @@
-const Header = ({}) => {
+export default function Header({}) {
   return (
-    <div className="">
-      <span className="">Header</span>
-    </div>
+    <header>
+      <span className="">Header Section</span>
+    </header>
   );
-};
+}
