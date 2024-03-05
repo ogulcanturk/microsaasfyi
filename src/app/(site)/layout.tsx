@@ -14,7 +14,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto flex max-w-5xl flex-col gap-12">
       <Header />
       {children}
       <Footer />
