@@ -1,7 +1,3 @@
-// Components
-import Header from "@/components/site/header";
-import Footer from "@/components/site/footer";
-
 // Types
 import type { Metadata } from "next";
 
@@ -14,10 +10,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-12">
-      <Header />
+    <div className="">
       {children}
-      <Footer />
     </div>
   );
 }
