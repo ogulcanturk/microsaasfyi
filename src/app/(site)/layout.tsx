@@ -1,17 +1,15 @@
-// Types
-import type { Metadata } from "next";
+// Components
+import Header from "@/components/site/header";
+import Footer from "@/components/site/footer";
 
-export const metadata: Metadata = {
-  title: "Micro SaaS FYI",
-  description: "",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="">
-      {children}
-    </div>
+    <>
+      <Header />
+      <main className="m-auto max-w-6xl flex gap-8 my-8">
+        {children}
+      </main>
+      <Footer />
+    </>
   );
-}
+};

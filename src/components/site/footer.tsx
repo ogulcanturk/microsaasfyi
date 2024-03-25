@@ -1,7 +1,7 @@
 export default function Footer({}) {
   return (
-    <header>
-      <span className="">Footer Section</span>
-    </header>
+    <footer className="m-auto max-w-6xl">
+      <span className="">footer</span>
+    </footer>
   );
 }
