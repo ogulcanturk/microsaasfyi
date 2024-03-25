@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 // Font & Styles
 import "@/styles/globals.css";
-import { Inter as FontSans } from "next/font/google";
+import { Inter as FontSans } from "next/font/google"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={cn("bg-slate-50", fontSans.variable)}>
+      <body className={cn("bg-slate-50 font-sans antialiased", fontSans.variable)}>
         {children}
       </body>
     </html>
